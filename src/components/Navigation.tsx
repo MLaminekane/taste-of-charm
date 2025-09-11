@@ -15,13 +15,15 @@ const Navigation = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#accueil" className="hover:text-primary transition-smooth">Accueil</a>
-            <a href="#menu" className="hover:text-primary transition-smooth">Menu</a>
+            <a href="/" className="hover:text-primary transition-smooth">Accueil</a>
+            <a href="/menu" className="hover:text-primary transition-smooth">Menu</a>
             <a href="#apropos" className="hover:text-primary transition-smooth">À Propos</a>
             <a href="#contact" className="hover:text-primary transition-smooth">Contact</a>
-            <Button variant="hero" size="sm">
-              Réserver
-            </Button>
+            <a href="/reservation">
+              <Button variant="hero" size="sm">
+                Réserver
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -37,10 +39,10 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-card shadow-elegant rounded-lg mt-2 p-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <a href="#accueil" className="hover:text-primary transition-smooth" onClick={() => setIsMenuOpen(false)}>
+              <a href="/" className="hover:text-primary transition-smooth" onClick={() => setIsMenuOpen(false)}>
                 Accueil
               </a>
-              <a href="#menu" className="hover:text-primary transition-smooth" onClick={() => setIsMenuOpen(false)}>
+              <a href="/menu" className="hover:text-primary transition-smooth" onClick={() => setIsMenuOpen(false)}>
                 Menu
               </a>
               <a href="#apropos" className="hover:text-primary transition-smooth" onClick={() => setIsMenuOpen(false)}>
@@ -49,9 +51,11 @@ const Navigation = () => {
               <a href="#contact" className="hover:text-primary transition-smooth" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </a>
-              <Button variant="hero" size="sm" className="w-full">
-                Réserver
-              </Button>
+              <a href="/reservation">
+                <Button variant="hero" size="sm" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                  Réserver
+                </Button>
+              </a>
             </div>
           </div>
         )}
