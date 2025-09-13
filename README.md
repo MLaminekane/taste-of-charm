@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+#  project exo : Aly
 
 ## Project info
 
